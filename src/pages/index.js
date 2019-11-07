@@ -1,10 +1,28 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "@emotion/styled"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+
+const StyledIntro = styled.div`
+  position: relative;
+
+  &:after {
+    background-color: #fc3;
+    border-left: 1em solid #f30;
+    border-right: 1em solid #03f;
+    bottom: -2rem;
+    content: "";
+    display: block;
+    height: 1em;
+    left: 0;
+    position: absolute;
+    width: 3em;
+  }
+`
 
 class BlogIndex extends React.Component {
   render() {
@@ -13,9 +31,16 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
+      <Layout bigHeader={true} location={this.props.location} title={siteTitle}>
+        <StyledIntro
+          style={{
+            marginTop: rhythm(2),
+            marginBottom: rhythm(4),
+          }}
+        >
+          <p>A blog about programming, the web, art, design, and stuff.</p>
+        </StyledIntro>
+        <SEO title="Hamburger Sandwich Blog - Home" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -42,6 +67,7 @@ class BlogIndex extends React.Component {
             </article>
           )
         })}
+        <Bio />
       </Layout>
     )
   }

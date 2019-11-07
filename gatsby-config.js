@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -57,13 +58,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Hamburger Sandwich Blog`,
+        short_name: `HS Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#f30`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/hs-blog-favicon.svg`,
       },
     },
     `gatsby-plugin-offline`,

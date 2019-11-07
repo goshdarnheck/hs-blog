@@ -6,10 +6,30 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-
+import styled from "@emotion/styled"
 import { rhythm } from "../utils/typography"
+
+const StyledBio = styled.div`
+  display: flex;
+  marginBottom: ${rhythm(2.5)};
+  marginTop: ${rhythm(2.5)};
+  position: relative;
+
+  &:after {
+    background-color: #fc3;
+    border-left: 1em solid #f30;
+    border-right: 1em solid #03f;
+    content: "";
+    display: block;
+    height: 1em;
+    left: 0;
+    position: absolute;
+    top: -2rem;
+    width: 3em;
+  }
+`
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -34,10 +54,10 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <div
+    <StyledBio
       style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
+        marginTop: rhythm(4),
+        marginBottom: rhythm(2)
       }}
     >
       <Image
@@ -54,13 +74,11 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in Toronto building apps and drawing things.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You could follow that dude on Twitter
-        </a>
+        Written by <Link to={`/about`}>{author}</Link> who lives and works in
+        Toronto <Link to={`/projects`}>building apps, drawing comics</Link> and
+        {` `}<a href={`https://twitter.com/${social.twitter}`}>tweeting</a>.
       </p>
-    </div>
+    </StyledBio>
   )
 }
 
