@@ -33,7 +33,7 @@ const BlogName = styled.h1`
   color: var(--secondary);
   background-image: none;
   font-size: ${h1Scale.fontSize};
-  letter-spacing: 0.3em;
+  letter-spacing: ${(rhythm(0.6))};
   line-height: ${h1Scale.lineHeight};
   margin-top: ${rhythm(2.3)};
   padding-left: ${rhythm(3)};
@@ -69,7 +69,7 @@ const h1ScaleLittle = scale(0);
 const BlogNameLittle = styled.h3`
   background-image: none;
   color: var(--secondary);
-  letter-spacing: 0.3em;
+  letter-spacing: ${(rhythm(0.2))};
   font-size: ${h1ScaleLittle.fontSize};
   padding-left: ${(rhythm(1.5))};
   position: relative;
