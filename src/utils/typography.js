@@ -1,30 +1,47 @@
 import Typography from "typography"
 import ThemeDoelger from "typography-theme-doelger"
+import { MOBILE_MEDIA_QUERY } from "typography-breakpoint-constants"
 
-ThemeDoelger.overrideThemeStyles = () => {
+ThemeDoelger.headerColor = "var(--secondary)"
+ThemeDoelger.bodyColor = "var(--primary)"
+ThemeDoelger.overrideThemeStyles = ({ scale, rhythm }) => {
   return {
-    "a": {
-      color: `#f30`,
-      backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #fc3 1px, #fc3 2px, rgba(0, 0, 0, 0) 2px)`
+    a: {
+      color: `var(--secondary)`,
+      backgroundImage: `none`
     },
     "a:hover": {
-      color: `#fc3`,
-      textShadow: `.03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff`,
-      backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #03f 1px, #03f 2px, rgba(0, 0, 0, 0) 2px)`
+      color: `var(--primary)`,
+      textShadow: `none`,
+      backgroundImage: `none`,
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
-    }
-    ,
-    "a.blog-name": {
-      color: `#03f`
     },
     "a.blog-name:hover span:first-child": {
-      color: `#f30`
+      color: `var(--tertiary)`,
     },
     "a.blog-name:hover span:last-child": {
-      color: `#fc3`
-    }
+      color: `var(--primary)`,
+    },
+    blockquote: {
+      ...scale(1 / 5),
+      borderLeft: `${rhythm(6 / 16)} solid var(--secondary)`,
+      color: `var(--primary)`,
+      paddingLeft: rhythm(10 / 16),
+      fontStyle: "italic",
+      marginLeft: 0,
+      marginRight: 0,
+    },
+    [MOBILE_MEDIA_QUERY]: {
+      blockquote: {
+        borderLeft: `${rhythm(3 / 16)} solid var(--secondary)`,
+        paddingLeft: rhythm(9 / 16),
+        fontStyle: "italic",
+        marginLeft: rhythm(-3 / 4),
+        marginRight: 0,
+      },
+    },
   }
 }
 

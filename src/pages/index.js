@@ -8,19 +8,18 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 const StyledIntro = styled.div`
+  margin-top: ${rhythm(2)};
+  margin-bottom: ${rhythm(2)};
   position: relative;
 
   &:after {
-    background-color: #fc3;
-    border-left: 1em solid #f30;
-    border-right: 1em solid #03f;
-    bottom: -2rem;
-    content: "";
+    background-color: var(--tertiary);
     display: block;
-    height: 1em;
+    height: ${rhythm(1)};
     left: 0;
+    top: 0;
     position: absolute;
-    width: 3em;
+    width: ${rhythm(1)};
   }
 `
 
@@ -31,14 +30,9 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout bigHeader={true} location={this.props.location} title={siteTitle}>
-        <StyledIntro
-          style={{
-            marginTop: rhythm(2),
-            marginBottom: rhythm(4),
-          }}
-        >
-          <p>A blog about programming, the web, art, design, and stuff.</p>
+      <Layout indexHeader={true} location={this.props.location} title={siteTitle}>
+        <StyledIntro>
+          <p>A blog about web development, programming, graphic design, ux, and other things I find interesting!</p>
         </StyledIntro>
         <SEO title="Hamburger Sandwich Blog - Home" />
         {posts.map(({ node }) => {

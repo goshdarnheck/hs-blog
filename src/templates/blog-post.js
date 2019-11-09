@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { rhythm } from "../utils/typography"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
+import Bio from "../components/bio"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import PageHeader from "../components/page-header"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -19,25 +20,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
-          <header>
-            <h1
-              style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
-              }}
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </header>
+          <PageHeader title={post.frontmatter.title} subtitle={post.frontmatter.date} />
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
@@ -48,8 +31,7 @@ class BlogPostTemplate extends React.Component {
             <Bio />
           </footer>
         </article>
-
-        <nav>
+        {/* <nav>
           <ul
             style={{
               display: `flex`,
@@ -74,7 +56,7 @@ class BlogPostTemplate extends React.Component {
               )}
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </Layout>
     )
   }
@@ -96,7 +78,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM Do, YYYY")
         description
       }
     }

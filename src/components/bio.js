@@ -13,21 +13,21 @@ import { rhythm } from "../utils/typography"
 
 const StyledBio = styled.div`
   display: flex;
-  marginBottom: ${rhythm(2.5)};
-  marginTop: ${rhythm(2.5)};
+  margin-top: ${rhythm(4)};
+  margin-bottom: ${rhythm(2)};
   position: relative;
 
   &:after {
-    background-color: #fc3;
-    border-left: 1em solid #f30;
-    border-right: 1em solid #03f;
+    background-color: var(--secondary);
+    border-top: ${rhythm(0.3)} solid var(--primary);
+    border-bottom: ${rhythm(0.3)} solid var(--tertiary);
     content: "";
     display: block;
-    height: 1em;
-    left: 0;
+    height: ${rhythm(0.9)};
+    left: -50vw;
     position: absolute;
     top: -2rem;
-    width: 3em;
+    width: calc(100% + 50vw);
   }
 `
 
@@ -55,10 +55,6 @@ const Bio = () => {
   const { author, social } = data.site.siteMetadata
   return (
     <StyledBio
-      style={{
-        marginTop: rhythm(4),
-        marginBottom: rhythm(2)
-      }}
     >
       <Image
         fixed={data.avatar.childImageSharp.fixed}
