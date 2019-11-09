@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
   margin-bottom: ${rhythm(1.6)};
   margin-top: ${rhythm(0.6)};
   padding-bottom: ${rhythm(0.3)};
-  padding-left: ${rhythm(1.5)};
+  padding-left: ${rhythm(1.7)};
   position: relative;
 
   &:before {
@@ -18,7 +18,7 @@ const StyledHeader = styled.header`
     content: "";
     display: block;
     height: 2.4em;
-    left: calc(-60vw + ${rhythm(1)});
+    left: calc(-60vw + ${rhythm(1.2)});
     position: absolute;
     bottom: ${(rhythm(0.5))};
     width: 60vw;

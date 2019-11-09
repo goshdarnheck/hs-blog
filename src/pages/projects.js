@@ -15,7 +15,7 @@ class Projects extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Projects" />
         <article>
-          <PageHeader title="Projects" />
+          <PageHeader title="Projects &amp; Stuff" />
           <p>
             Here's some stuff that I have done that I'd like to share{" "}
             <span role="img" aria-label="jack-o-lantern emoji">
