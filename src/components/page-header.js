@@ -5,8 +5,8 @@ import { rhythm, scale } from "../utils/typography"
 
 const StyledHeader = styled.header`
   display: flex;
-  margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(1)};
+  margin-bottom: ${rhythm(1.6)};
+  margin-top: ${rhythm(0.6)};
   padding-bottom: ${rhythm(0.3)};
   padding-left: ${rhythm(1.5)};
   position: relative;

@@ -22,11 +22,6 @@ class BlogPostTemplate extends React.Component {
         <article>
           <PageHeader title={post.frontmatter.title} subtitle={post.frontmatter.date} />
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
-            style={{
-              marginBottom: rhythm(1),
-            }}
-          />
           <footer>
             <Bio />
           </footer>

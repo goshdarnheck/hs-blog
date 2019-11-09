@@ -65,21 +65,21 @@ const BlogName = styled.h1`
     }
   }
 `
-const h1ScaleLittle = scale(0);
+const h1ScaleLittle = scale(-0.2);
 const BlogNameLittle = styled.h3`
   background-image: none;
   color: var(--secondary);
   letter-spacing: ${(rhythm(0.2))};
   font-size: ${h1ScaleLittle.fontSize};
-  padding-left: ${(rhythm(1.5))};
+  padding-left: ${(rhythm(1.1))};
   position: relative;
   margin: ${rhythm(0.8)} 0 0 0;
 
   :before {
     content: "◀";
-    position: absolute;
-    top: -${(rhythm(0.05))};
     left: -${(rhythm(0))};
+    position: absolute;
+    top: 0;
   }
 
   :hover:before {

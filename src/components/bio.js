@@ -14,7 +14,7 @@ import { rhythm } from "../utils/typography"
 const StyledBio = styled.div`
   display: flex;
   margin-top: ${rhythm(4)};
-  margin-bottom: ${rhythm(2)};
+  margin-bottom: 0;
   position: relative;
 
   &:after {
@@ -26,7 +26,7 @@ const StyledBio = styled.div`
     height: ${rhythm(0.9)};
     left: -50vw;
     position: absolute;
-    top: -2rem;
+    top: ${rhythm(-1.8)};
     width: calc(100% + 50vw);
   }
 `
@@ -54,8 +54,7 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <StyledBio
-    >
+    <StyledBio>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}

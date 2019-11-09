@@ -1,0 +1,6 @@
+- add tags to post data
+- add page for each tag
+- add each tag to each post and link to tag page
+- find out if posts on home page need to be limited
+- maybe add a "recent posts" heading on home page
+- add an archive page that lists all posts
