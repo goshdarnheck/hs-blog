@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PageHeader from "../components/page-header"
+import ArticleHeader from "../components/article-header"
 import Bio from "../components/bio"
 
 class Projects extends React.Component {
@@ -15,7 +15,7 @@ class Projects extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Projects" />
         <article>
-          <PageHeader title="Projects &amp; Stuff" />
+          <ArticleHeader title="Projects &amp; Stuff" />
           <p>
             Here's some stuff that I have done that I'd like to share{" "}
             <span role="img" aria-label="jack-o-lantern emoji">
@@ -39,7 +39,10 @@ class Projects extends React.Component {
               <p>
                 Ghosthugs is the name of my game jam team. We try to make cute
                 little games at jams for fun and the experience! You can
-                download some of the games here
+                <a href="https://ghosthugs.itch.io/">
+                  download some of the jam games
+                </a>{" "}
+                on itch.io.
               </p>
             </li>
             <li>
@@ -50,29 +53,30 @@ class Projects extends React.Component {
               </p>
             </li>
             <li>
-              <a href="http://life.eyehack.com">Game of Life</a>
+              <a href="http://life.eyehack.com">React Game of Life</a>
               <p>
-                A twitter bot that tweets our random wizard images and
-                descrption once a day. Built with Python 3.
+                Conway's Game of Life built with React. This was made as a test
+                to see how React could handle the amount of DOM updates needed
+                for this game. It's old, but it's still a work in progress.
               </p>
             </li>
             <li>
-              <a href="/logos">Logo Design</a>
+              <Link to={`/logos`}>Logo Design</Link>
               <p>I'm a big fan of logos, and like to create my own for fun!</p>
             </li>
             <li>
-              <a href="/comics">Comics &amp; Doodles</a>
+              <Link to={`/comics`}>Comics &amp; Doodles</Link>
               <p>Check out my doodles and comics.</p>
             </li>
             <li>
-              <a href="/paintings">Paintings</a>
+              <Link to={`/paintings`}>Paintings</Link>
               <p>Sometimes I paint things.</p>
             </li>
             <li>
-              <a href="/photography">Photography</a>
+              <a href="https://500px.com/goshdarnheck">Photography</a>
               <p>
                 I like taking photos wherever I go. This is a sample of some of
-                my favourites. More photography at 500px.
+                my favourites.
               </p>
             </li>
             <li>
@@ -84,10 +88,10 @@ class Projects extends React.Component {
                 Unity knowledge.
               </p>
             </li>
-            <li>
+            {/* <li>
               <a href="soundcloud">Music</a>
               <p>Experiments in chill/ambient music with some guitar.</p>
-            </li>
+            </li> */}
           </ul>
           <footer>
             <Bio />

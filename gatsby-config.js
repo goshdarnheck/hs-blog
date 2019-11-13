@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Hamburger Sandwich`,
+    title: `Hamburger Sandwich Blog`,
     author: `Matt Rapati`,
-    description: `A blog about web development, design & other stuff.`,
+    description: `A blog about web development, frontend, ux, a11y, design & whatever else interests me!`,
     siteUrl: `https://hamburgersandwich.com/`,
     social: {
       twitter: `goshdarnheck`,
@@ -62,7 +62,7 @@ module.exports = {
         short_name: `HS Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#f30`,
+        theme_color: `#f50`,
         display: `minimal-ui`,
         icon: `content/assets/hs-blog-favicon.svg`,
       },
@@ -73,6 +73,14 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
       },
     },
   ],
