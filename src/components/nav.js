@@ -24,14 +24,14 @@ const Nav = () => {
       <Link
         css={css`
           color: var(--background);
-          margin-left: ${rhythm(1.7)};
+          margin-left: ${rhythm(1.8)};
 
           :hover {
             color: var(--tertiary);
           }
 
           ${TABLET_MEDIA_QUERY} {
-            margin-left: ${rhythm(0.7)};
+            margin-left: ${rhythm(0.9)};
           }
         `}
         title="Home"
