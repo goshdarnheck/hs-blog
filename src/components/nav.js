@@ -24,7 +24,7 @@ const Nav = () => {
       <Link
         css={css`
           color: var(--background);
-          margin-left: ${rhythm(1.8)};
+          // margin-left: ${rhythm(1.8)};
 
           :hover {
             color: var(--tertiary);
