@@ -2,6 +2,7 @@
 title: Hello World
 date: "2019-11-05T22:12:03.284Z"
 description: "A post about this new website and a drawing of a cat."
+tags: ["Personal", "Web Development"]
 ---
 
 This is my first post on my new real blog! How exciting!

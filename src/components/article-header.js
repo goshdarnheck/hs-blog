@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
 import { TABLET_MEDIA_QUERY } from "typography-breakpoint-constants"
 import { rhythm, scale } from "../utils/typography"
 

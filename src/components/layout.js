@@ -9,11 +9,7 @@ class Layout extends React.Component {
     const { children, hideNav } = this.props
 
     return (
-      <div
-        css={css`
-          min-height: 100vh;
-        `}
-      >
+      <div>
         <GlobalEmotion
           styles={css`
             html {

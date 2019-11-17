@@ -1,42 +1,23 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
+import { graphql } from "gatsby"
 
+import PostLink from "../components/post-link"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ArticleHeader from "../components/article-header"
 import Bio from "../components/bio"
 
-class About extends React.Component {
+class Archive extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout>
         <SEO title="Post Archive" />
         <article>
           <ArticleHeader title="Post Archive" />
-          <p>Here's a list of all the Hamburger Sandwich posts.</p>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link to={node.fields.slug}>
-                      {title}
-                    </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                </header>
-              </article>
-            )
+          {posts.map(({ node }, index) => {
+            return <PostLink key={index} postNode={node} />
           })}
           <footer>
             <Bio />
@@ -47,7 +28,7 @@ class About extends React.Component {
   }
 }
 
-export default About
+export default Archive
 
 export const pageQuery = graphql`
   query {
@@ -67,6 +48,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

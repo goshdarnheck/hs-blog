@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { TABLET_MEDIA_QUERY } from "typography-breakpoint-constants"
 import { scale, rhythm } from "../utils/typography"
+import kebabCase from "lodash/kebabCase"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -14,11 +15,11 @@ const h1ScaleMobile = scale(1)
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    const tags = data.tagsGroup.group
 
     return (
-      <Layout hideNav={true} location={this.props.location} title={siteTitle}>
+      <Layout hideNav={true}>
         <header>
           <h1
             css={css`
@@ -105,9 +106,7 @@ class BlogIndex extends React.Component {
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
-                  <Link to={node.fields.slug}>
-                    {title}
-                  </Link>
+                  <Link to={node.fields.slug}>{title}</Link>
                 </h3>
               </header>
               <section>
@@ -128,41 +127,34 @@ class BlogIndex extends React.Component {
         >
           <Link to={`/archive`}>Complete Post Archive</Link>
         </div>
-        <h2>Posts by Tag</h2>
-        <ul
-          css={css`
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 1em;
-            grid-row-gap: 1em;
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        {tags && (
+          <div>
+            <h2>Posts by Tag</h2>
+            <ul
+              css={css`
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 1em;
+                grid-row-gap: 1em;
+                list-style: none;
+                margin: 0;
+                padding: 0;
 
-            li {
-              margin: 0;
-            }
-          `}
-        >
-          <li>
-            <Link to={`/tag/web-development`}>Web Development</Link>
-          </li>
-          <li>
-            <Link to={`/tag/design`}>Design</Link>
-          </li>
-          <li>
-            <Link>Logos</Link>
-          </li>
-          <li>
-            <Link>Javascript</Link>
-          </li>
-          <li>
-            <Link>ReactJS</Link>
-          </li>
-          <li>
-            <Link>Miscellaneous</Link>
-          </li>
-        </ul>
+                li {
+                  margin: 0;
+                }
+              `}
+            >
+              {tags.map((tag, index) => {
+                return (
+                  <li key={index}>
+                    <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>{tag.fieldValue} ({tag.totalCount})</Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        )}
         <Bio />
       </Layout>
     )
@@ -178,7 +170,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(limit: 2, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
@@ -191,6 +183,12 @@ export const pageQuery = graphql`
             description
           }
         }
+      }
+    }
+    tagsGroup: allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
       }
     }
   }

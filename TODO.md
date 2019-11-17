@@ -1,6 +1,8 @@
-- add tags to post data
-- add page for each tag
-- add each tag to each post and link to tag page
-- find out if posts on home page need to be limited
-- maybe add a "recent posts" heading on home page
-- add an archive page that lists all posts
+- do page components need to be classes?
+- create better 404 page (w/ comic)
+- review and finish "projects" page
+- review and finish "about" page
+- create first blog post (hey I made this site with gatsby, it's a blog, i'm going to blog about these things:)
+- create second blog post (js array push/pop comic article)
+- create third blog post (js array shift/unshift comic article)
+- create fourth blog post (I made starmemory, it's here, it does this, it was made with these things)

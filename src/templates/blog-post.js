@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 import ArticleHeader from "../components/article-header"
+import Tagged from "../components/tagged"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -23,6 +24,7 @@ class BlogPostTemplate extends React.Component {
             subtitle={post.frontmatter.date}
           />
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          {post.frontmatter.tags && <Tagged tags={post.frontmatter.tags} />}
           <footer>
             <Bio />
           </footer>
@@ -50,6 +52,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM Do, YYYY")
         description
+        tags
       }
     }
   }
