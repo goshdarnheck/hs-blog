@@ -1,5 +1,4 @@
-- review and finish "projects" page
-- review and finish "about" page
+- add images to the "projects" page
 - create better 404 page (w/ comic)
 - create first blog post (hey I made this site with gatsby, it's a blog, i'm going to blog about these things:...)
 - go live
@@ -8,3 +7,9 @@
 - create second blog post (js array push/pop comic article)
 - create third blog post (js array shift/unshift comic article)
 - create fourth blog post (I made starmemory, it's here, it does this, it was made with these things)
+- blog post on how I love flex box, and used it SO MUCH on starmemory
+- blog post on how I think grid layout is the future!
+- blog post on the history of ROUNDED CORNERS and the web
+- blog post on a rare css feature: font-variant
+- blog post on a rare css feature: ... etc.
+- blog post on using emotion and typography.js together (w/ gatsby)

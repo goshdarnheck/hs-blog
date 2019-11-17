@@ -143,6 +143,10 @@ class BlogIndex extends React.Component {
                 li {
                   margin: 0;
                 }
+
+                ${TABLET_MEDIA_QUERY} {
+                  grid-template-columns: 1fr 1fr;
+                }
               `}
             >
               {tags.map((tag, index) => {

@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Hamburger Sandwich Blog`,
     author: `Matt Rapati`,
+    email: `matt@hamburgersandwich.com`,
     description: `A blog about web development, frontend, ux, a11y, design & whatever else interests me!`,
     siteUrl: `https://hamburgersandwich.com/`,
     social: {
