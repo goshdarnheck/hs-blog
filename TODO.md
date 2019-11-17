@@ -1,8 +1,10 @@
-- do page components need to be classes?
-- create better 404 page (w/ comic)
 - review and finish "projects" page
 - review and finish "about" page
-- create first blog post (hey I made this site with gatsby, it's a blog, i'm going to blog about these things:)
+- create better 404 page (w/ comic)
+- create first blog post (hey I made this site with gatsby, it's a blog, i'm going to blog about these things:...)
+- go live
+- change eyehack.com to a landing page for small code projects like the game of life
+- add content logos, comics, painting, and photography pages
 - create second blog post (js array push/pop comic article)
 - create third blog post (js array shift/unshift comic article)
 - create fourth blog post (I made starmemory, it's here, it does this, it was made with these things)

@@ -19,7 +19,7 @@ const Projects = () => (
       </p>
       <ul>
         <li>
-          <a href="http://alpha.starmemory.com">Star Memory</a>
+          <a href="http://alpha.starmemory.ca">Star Memory</a>
           <p>
             Star Memory is a web app designed to help anyone track whatever they
             want! It's aimed at personal use in the interest of finding patterns
@@ -68,7 +68,7 @@ const Projects = () => (
           <p>Sometimes I paint things.</p>
         </li>
         <li>
-          <a href="https://500px.com/goshdarnheck">Photography</a>
+          <a href="/photography">Photography</a>
           <p>
             I like taking photos wherever I go. This is a sample of some of my
             favourites.
@@ -81,10 +81,6 @@ const Projects = () => (
             knowledge.
           </p>
         </li>
-        {/* <li>
-              <a href="soundcloud">Music</a>
-              <p>Experiments in chill/ambient music with some guitar.</p>
-            </li> */}
       </ul>
       <footer>
         <Bio />

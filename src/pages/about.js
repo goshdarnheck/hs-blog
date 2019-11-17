@@ -13,12 +13,12 @@ const About = () => (
       <p>
         Hey, I'm Matt Rapati and this is my personal blog. I'm a full-stack web
         developer who lives in Toronto, Canada. My focus is on frontend
-        development, and I have a have a lot of interest in desgin, ui/ux, and
+        development, and I have a have a lot of interest in design, ui/ux, and
         accessibility.
       </p>
       <p>
-        I have a lot of different interests including art, design, music,
-        cooking, skateboarding, programming, science, and photography. Which
+        Besides programming and web developer I'm also interested in art, music,
+        cooking, skateboarding, science, and photography. Which
         means that you'll find posts here on a wide variety of topics!
       </p>
       <p>
@@ -28,7 +28,7 @@ const About = () => (
       <p>
         If you're wondering why the name "Hamburger Sandwich", it's because one
         day many years ago I randomly checked if this domain was available, and
-        it was. So I bought it!
+        it was. So I bought it and now it's my blog.
       </p>
       <footer>
         <Bio />
