@@ -72,7 +72,7 @@ const Projects = () => (
             once a day. Built with Python 3. It's generated almost 4000 wizards so far!
           </p>
         </li>
-        <li>
+        {/* <li>
           <h2>
             <a href="http://life.eyehack.com">Conway's Game of Life in React</a>
           </h2>
@@ -81,35 +81,43 @@ const Projects = () => (
             see how React could handle the amount of DOM updates needed for this
             game. It's old, but it's still a work in progress.
           </p>
-        </li>
+        </li> */}
         <li>
           <h2>
-            <Link to={`/logos`}>Logo Design</Link>
+            Logo Design
+            {/* <Link to={`/logos`}>Logo Design</Link> */}
           </h2>
+          <p><small>Coming Soon!</small></p>
           <p>I have a bit of a logo obsession. I love analyzing and critiquing them. So I like to try making my own sometimes too!</p>
         </li>
         <li>
           <h2>
-            <Link to={`/comics`}>Comics &amp; Doodles</Link>
+            Comics &amp; Doodles
+            {/* <Link to={`/comics`}>Comics &amp; Doodles</Link> */}
           </h2>
+          <p><small>Coming Soon!</small></p>
           <p>Check out my doodles and comics.</p>
         </li>
         <li>
           <h2>
-            <Link to={`/paintings`}>Paintings</Link>
+            Paintings
+            {/* <Link to={`/paintings`}>Paintings</Link> */}
           </h2>
+          <p><small>Coming Soon!</small></p>
           <p>Sometimes I paint things.</p>
         </li>
         <li>
           <h2>
-            <a href="/photography">Photography</a>
+            Photography
+            {/* <Link to={`/photography`}>photography</Link> */}
           </h2>
+          <p><small>Coming Soon!</small></p>
           <p>
             I like taking photos wherever I go. This is a sample of some of my
             favourites.
           </p>
         </li>
-        <li>
+        {/* <li>
           <h2>
             <a href="https://itch.io/jam/tojam13/rate/254575">
               Potion Crushers
@@ -119,7 +127,7 @@ const Projects = () => (
             A game jam game built over a weekend while applying some new Unity
             knowledge. This is my first Unity game, and really my first "3D" game as well.
           </p>
-        </li>
+        </li> */}
       </ul>
       <footer>
         <Bio />

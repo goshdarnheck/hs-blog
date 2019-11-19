@@ -91,7 +91,7 @@ class BlogIndex extends React.Component {
         >
           <p>
             A blog about web development, programming, graphic design, ux, and
-            other things I find interesting, which does includes hamburgers.
+            other things I find interesting, which <em>does</em> includes hamburgers.
           </p>
         </div>
         <SEO title="Home" />
