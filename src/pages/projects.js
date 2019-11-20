@@ -72,7 +72,7 @@ const Projects = () => (
             once a day. Built with Python 3. It's generated almost 4000 wizards so far!
           </p>
         </li>
-        {/* <li>
+        <li>
           <h2>
             <a href="http://life.eyehack.com">Conway's Game of Life in React</a>
           </h2>
@@ -81,7 +81,7 @@ const Projects = () => (
             see how React could handle the amount of DOM updates needed for this
             game. It's old, but it's still a work in progress.
           </p>
-        </li> */}
+        </li>
         <li>
           <h2>
             Logo Design

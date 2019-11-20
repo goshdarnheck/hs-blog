@@ -1,3 +1,4 @@
+- remove typography-theme-doelger
 - add images to the "projects" page
 - create better 404 page (w/ comic)
 - create first blog post (hey I made this site with gatsby, it's a blog, i'm going to blog about these things:...)
