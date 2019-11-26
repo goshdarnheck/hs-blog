@@ -1,4 +1,3 @@
-- remove typography-theme-doelger
 - add images to the "projects" page
 - create better 404 page (w/ comic)
 - add content logos, comics, painting, and photography pages
