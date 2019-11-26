@@ -1,3 +1,6 @@
+content/blog-wip/*
+!content/blog-wip/.gitkeep
+
 # Logs
 logs
 *.log
