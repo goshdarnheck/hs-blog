@@ -1,6 +1,6 @@
 ---
 title: Hello World!
-date: "2019-11-17T22:12:03.284Z"
+date: "2019-11-17"
 description: "A post about this new website and a drawing of a cat."
 tags: ["Personal", "Web Development"]
 ---

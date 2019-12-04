@@ -14,6 +14,7 @@ class Layout extends React.Component {
           styles={css`
             html {
               box-sizing: border-box;
+              background-color: var(--background)
             }
 
             *,
@@ -23,7 +24,7 @@ class Layout extends React.Component {
             }
 
             :root {
-              --background: #fff;
+              --background: #fffcf4;
               --primary: #320;
               --secondary: #f50;
               --tertiary: #fc3;

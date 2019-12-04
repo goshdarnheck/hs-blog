@@ -1,6 +1,6 @@
 ---
 title: Creating a Website with Gatsby
-date: "2019-11-25T20:00:00.121Z"
+date: "2019-11-25"
 tags: ["Web Development", "Gatsby"]
 ---
 
