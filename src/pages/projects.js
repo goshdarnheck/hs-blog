@@ -39,14 +39,14 @@ const Projects = () => (
       >
         <li>
           <h2>
-            <a href="http://alpha.starmemory.ca">Star Memory</a>
+            <a href="http://starmemory.ca">Starmemory</a>
           </h2>
           <p>
             Star Memory is a web app designed to help anyone track whatever they
             want! It's aimed at personal use in the interest of finding patterns
             in your life. Helps keep you accountable, give a sense of
             satisfaction, and keep a historical account of progress. But you
-            could use it to track anything you'd like! Built with Reactjs and
+            could use it to track anything you'd like! Built with React and
             Firebase.
           </p>
         </li>

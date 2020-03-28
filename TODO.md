@@ -1,7 +1,8 @@
-- blog post (js array push/pop comic article)
+- blog post (js array push/pop comic article) https://stackoverflow.com/questions/8073673/how-can-i-add-new-array-elements-at-the-beginning-of-an-array-in-javascript
 - blog post (js array shift/unshift comic article)
-- add images to the "projects" page?
+- blog post about js console object https://www.youtube.com/watch?v=L8CDt1J3DAw
 - create better 404 page (w/ comic)
+- using flex-direction to visual re-order content (i.e. keep label for radio button before input, but visually style it after)
 - add content to pages: logos, comics, painting, photography
 - blog post (I made starmemory, it's here, it does this, it was made with these things)
 - blog post on how I love flex box, and used it SO MUCH on starmemory
@@ -13,5 +14,6 @@
 - blog post on using emotion and typography.js together (w/ gatsby)
 - blog post on the best e-sport logos
 - blog post on the best skateboarding logos
+- blog post about increasings the a11y of Starmemory
 - add analytics
 - check gatsby go-live documentation and implement anything important
