@@ -42,7 +42,7 @@ const Projects = () => (
             <a href="http://starmemory.ca">Starmemory</a>
           </h2>
           <p>
-            Star Memory is a web app designed to help anyone track whatever they
+            Starmemory is a web app designed to help anyone track whatever they
             want! It's aimed at personal use in the interest of finding patterns
             in your life. Helps keep you accountable, give a sense of
             satisfaction, and keep a historical account of progress. But you
