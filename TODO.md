@@ -15,5 +15,3 @@
 - blog post on the best e-sport logos
 - blog post on the best skateboarding logos
 - blog post about increasings the a11y of Starmemory
-- add analytics
-- check gatsby go-live documentation and implement anything important
